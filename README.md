@@ -28,5 +28,36 @@ So from what I understand, he has a file that he wants to copy n amount of times
 
 So the first step we will do is we need the file ID for the file that is going to be duplicated. To find the file ID for a file, we can go to that file in drive and then look at the URL.
 
+I have created a file for this demonstration. Here is where you can find the URL
+
 ![Image1](/images/1.png)
+
+Now that we have a file ID we can associate a variable with it in our Code.gs and then do things to it (like copy it a bunch of time, for example)
+
+```javascript
+function myFunction() {
+  let fileId = "1yxtcZjfzkH31lKNPHXzfF5t61V4XtLCIezuO1OZTMrA";
+}
+```
+
+In order to work with files, we need to first call the ```DriveApp``` class and then run the ```.getFileById()``` method.
+
+```javascript
+function myFunction() {
+  let fileId = "1yxtcZjfzkH31lKNPHXzfF5t61V4XtLCIezuO1OZTMrA";
+  let fileObject = DriveApp.getFileById(fileId);
+}
+```
+
+Now before we continue, we should run the function by going to the Google script editor and going to Run -> Run Function -> myFunction. We should do this now because it's going to ask us for permissions and we'll have to click through a prompt telling Google that yes, dad. It's ok for my own script to edit my own files.
+
+![Image2](/images/2.png)
+
+![Image3](/images/3.png)
+
+Choose the appropriate account (whichever the file is stored on) and then clicked advanced to give permissions
+
+![Image4](/images/4.png)
+
+Give it access and now our script will be able to do it's job.
 
