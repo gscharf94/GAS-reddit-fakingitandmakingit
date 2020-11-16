@@ -76,7 +76,7 @@ function createFileNames(n, startingDate) {
   let dateObj = new Date(startingDate);
   let dateObj2 = new Date(startingDate);
 
-  // this adds 4 to the date obj
+  // this adds 4 days to the date obj
   dateObj2.setDate(dateObj2.getDate() + 4);
 
   // this loops n number of times
@@ -97,4 +97,31 @@ function createFileNames(n, startingDate) {
 }
 ```
 
+So now we just have to call the function ```createFileNames()``` with how many files we want to copy and then what is the starting date, in 'MM-DD-YYYY' format and it will output an array for us. That was the hardest part, we are almost done.
 
+-----
+
+Now we will edit our ```myFunction()```
+```javascript
+function myFunction() {
+  const numberOfFiles = 10; // Change this here to change how many files get copied
+  const startingDate = '08-30-2020'; // Change this here to control the starting date
+
+  let fileId = "1yxtcZjfzkH31lKNPHXzfF5t61V4XtLCIezuO1OZTMrA";
+  let fileObject = DriveApp.getFileById(fileId);
+
+  // we get the array of filenames from our previous function
+  let filenames = createFileNames(numberOfFiles, startingDate);
+
+  // we loop through the array
+  for (const filename of filenames) {
+    // and we make the copies with the appropriate filename
+    fileObject.makeCopy(filename);
+  }
+
+}
+```
+
+You may have to give the script more permissions, but you just go back to the script editor and run ```myFunction()``` and it will copy it based on the constants you set (```numberOfFiles``` & ```startingDate```)
+
+![Image5](/images/5.png)
