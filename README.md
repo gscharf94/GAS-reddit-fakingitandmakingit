@@ -24,4 +24,9 @@ Ok, so here is the prompt that reddit user /u/fakingitandmakingit requested help
 
 ---------
 
-So from what I understand, he has a file that he wants to copy n amount of times and each filename will be a ```date -> date + 4 format```, increasing by a week
+So from what I understand, he has a file that he wants to copy n amount of times and each filename will be a ```date -> date + 4 format```, increasing by a week.
+
+So the first step we will do is we need the file ID for the file that is going to be duplicated. To find the file ID for a file, we can go to that file in drive and then look at the URL.
+
+![Image1](/images/1.png)
+
