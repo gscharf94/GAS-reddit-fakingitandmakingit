@@ -7,8 +7,11 @@ Ok, so here is the prompt that reddit user /u/fakingitandmakingit requested help
 >The naming scheme goes like this:
 
 >>08-17 > 08-21
+
 >>08-24 > 08-28
+
 >>08-31 > 09-04
+
 >>etc.
 
 >I don't mind having to create a reference sheet which pulls the file names, that's easy enough to do in a sheet, but the duplicating and renaming is the tedious part.
