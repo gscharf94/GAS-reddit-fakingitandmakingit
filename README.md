@@ -61,3 +61,40 @@ Choose the appropriate account (whichever the file is stored on) and then clicke
 
 Give it access and now our script will be able to do it's job.
 
+-------
+
+Ok, now let's create a function that returns n number of file names. This function will take an input n, and a string in the format 'MM-DD-YYYY' that will define the starting date. Then it will output an array with a list of filenames in the format that our friend /u/fakingitandmakingit specified
+
+```javascript
+function createFileNames(n, startingDate) {
+  // this is where we will push all the filenames to
+  // and the function will return this array
+  let outputArray = [];
+
+  // first we turn our string into a javascript Date object
+  // and we make a second one for 4 days after
+  let dateObj = new Date(startingDate);
+  let dateObj2 = new Date(startingDate);
+
+  // this adds 4 to the date obj
+  dateObj2.setDate(dateObj2.getDate() + 4);
+
+  // this loops n number of times
+  for (let i = 0; i < n; i++) {
+    // this is a template string that basically formats the two date objs in
+    // MM-DD > MM2-DD2
+    let filename = `${String(dateObj.getMonth()+1).padStart(2,'0')}-${String(dateObj.getDate()).padStart(2,'0')} > ${String(dateObj2.getMonth()+1).padStart(2,'0')}-${String(dateObj2.getDate()).padStart(2,'0')}`;
+
+    // then we append it to the outputArray
+    outputArray.push(filename);
+
+    // and we add 7 days to each date object
+    dateObj.setDate(dateObj.getDate() + 7);
+    dateObj2.setDate(dateObj2.getDate() + 7);
+  }
+
+  return outputArray;
+}
+```
+
+
