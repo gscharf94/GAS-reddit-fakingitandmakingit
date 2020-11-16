@@ -36,7 +36,7 @@ Now that we have a file ID we can associate a variable with it in our Code.gs an
 
 ```javascript
 function myFunction() {
-  let fileId = "1yxtcZjfzkH31lKNPHXzfF5t61V4XtLCIezuO1OZTMrA";
+  const fileId = "1yxtcZjfzkH31lKNPHXzfF5t61V4XtLCIezuO1OZTMrA";
 }
 ```
 
@@ -44,7 +44,7 @@ In order to work with files, we need to first call the ```DriveApp``` class and 
 
 ```javascript
 function myFunction() {
-  let fileId = "1yxtcZjfzkH31lKNPHXzfF5t61V4XtLCIezuO1OZTMrA";
+  const fileId = "1yxtcZjfzkH31lKNPHXzfF5t61V4XtLCIezuO1OZTMrA";
   let fileObject = DriveApp.getFileById(fileId);
 }
 ```
@@ -107,7 +107,7 @@ function myFunction() {
   const numberOfFiles = 10; // Change this here to change how many files get copied
   const startingDate = '08-30-2020'; // Change this here to control the starting date
 
-  let fileId = "1yxtcZjfzkH31lKNPHXzfF5t61V4XtLCIezuO1OZTMrA";
+  const fileId = "1yxtcZjfzkH31lKNPHXzfF5t61V4XtLCIezuO1OZTMrA";
   let fileObject = DriveApp.getFileById(fileId);
 
   // we get the array of filenames from our previous function
@@ -125,3 +125,6 @@ function myFunction() {
 You may have to give the script more permissions, but you just go back to the script editor and run ```myFunction()``` and it will copy it based on the constants you set (```numberOfFiles``` & ```startingDate```)
 
 ![Image5](/images/5.png)
+
+
+If you wanna copy the code, open the "Code.js" file up on the top of this page and just copy that text into your script editor. Make sure you change the fileId, numberOfFiles, and startingDate variables.

@@ -2,7 +2,7 @@ function myFunction() {
   const numberOfFiles = 10; // Change this here to change how many files get copied
   const startingDate = '08-30-2020'; // Change this here to control the starting date
 
-  let fileId = "1yxtcZjfzkH31lKNPHXzfF5t61V4XtLCIezuO1OZTMrA";
+  const fileId = "1yxtcZjfzkH31lKNPHXzfF5t61V4XtLCIezuO1OZTMrA";
   let fileObject = DriveApp.getFileById(fileId);
 
   // we get the array of filenames from our previous function
